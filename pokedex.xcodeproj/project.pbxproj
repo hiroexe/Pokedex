@@ -11,6 +11,9 @@
 		3C9671A02861F96100B92B18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96719F2861F96100B92B18 /* ContentView.swift */; };
 		3C9671A22861F96500B92B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9671A12861F96500B92B18 /* Assets.xcassets */; };
 		3C9671A52861F96500B92B18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9671A42861F96500B92B18 /* Preview Assets.xcassets */; };
+		3C9671AD2861FB2900B92B18 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9671AC2861FB2900B92B18 /* Pokemon.swift */; };
+		3C9671AF2862012700B92B18 /* PokemonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9671AE2862012700B92B18 /* PokemonSelected.swift */; };
+		3C9671D2286214C300B92B18 /* PokemonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9671D1286214C300B92B18 /* PokemonImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		3C96719F2861F96100B92B18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C9671A12861F96500B92B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C9671A42861F96500B92B18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C9671AC2861FB2900B92B18 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		3C9671AE2862012700B92B18 /* PokemonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelected.swift; sourceTree = "<group>"; };
+		3C9671D1286214C300B92B18 /* PokemonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,9 @@
 		3C96719C2861F96100B92B18 /* pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				3C9671D0286214A300B92B18 /* View */,
+				3C9671AB2861FAF600B92B18 /* Api */,
 				3C96719D2861F96100B92B18 /* pokedexApp.swift */,
-				3C96719F2861F96100B92B18 /* ContentView.swift */,
 				3C9671A12861F96500B92B18 /* Assets.xcassets */,
 				3C9671A32861F96500B92B18 /* Preview Content */,
 			);
@@ -65,6 +72,24 @@
 				3C9671A42861F96500B92B18 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C9671AB2861FAF600B92B18 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				3C9671AC2861FB2900B92B18 /* Pokemon.swift */,
+				3C9671AE2862012700B92B18 /* PokemonSelected.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		3C9671D0286214A300B92B18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C96719F2861F96100B92B18 /* ContentView.swift */,
+				3C9671D1286214C300B92B18 /* PokemonImage.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9671A02861F96100B92B18 /* ContentView.swift in Sources */,
+				3C9671D2286214C300B92B18 /* PokemonImage.swift in Sources */,
 				3C96719E2861F96100B92B18 /* pokedexApp.swift in Sources */,
+				3C9671AF2862012700B92B18 /* PokemonSelected.swift in Sources */,
+				3C9671AD2861FB2900B92B18 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pokedex/Preview Content\"";
+				DEVELOPMENT_TEAM = X52R3T96JU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pokedex/Preview Content\"";
+				DEVELOPMENT_TEAM = X52R3T96JU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
