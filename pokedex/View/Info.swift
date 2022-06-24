@@ -7,21 +7,22 @@
 
 import SwiftUI
 
-struct PokemonImage: View {
-    var imageLink = ""
+struct PokemonSize: View {
+    var sizeLink = ""
     @State private var pokemonSprite = ""
     
     var body: some View {
-        AsyncImage(url: URL(string: pokemonSprite))
-            .frame(width: 75, height: 75)
-            .clipShape(Circle())
-            .foregroundColor(Color.gray.opacity(0.60))
-            .scaledToFit()
+        
         
     }
     
     func getSprite(url: String) {
-        self.pokemonSprite = url
+        var tempSprite: String?
+        PokemonSelectedInfo().getInfo(url: url) { size in
+            tempSprite = String(size.weight)
+            self.pokemonSprite = tempSprite ?? "placeholder"
+        }
+        
     }
 }
 

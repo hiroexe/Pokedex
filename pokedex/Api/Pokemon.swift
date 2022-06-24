@@ -6,7 +6,7 @@
 //
 //https://pokeapi.co/api/v2/pokemon?limit=151
 
-
+/*
 import Foundation
 
 struct Pokemon : Codable{
@@ -14,9 +14,11 @@ struct Pokemon : Codable{
 }
 
 struct PokemonEntry : Codable, Identifiable  {
-    let id = UUID()
+    
+    var id: Int
     var name: String
     var url: String
+
 }
 
 class PokeApi  {
@@ -25,12 +27,23 @@ class PokeApi  {
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
-            
+            do {
+                let pokemonList = try JSONDecoder().decode(Pokemon.self, from: data)
+                DispatchQueue.main.async {
+                    completion(pokemonList.results)
+                }
+            }
+            catch {
+                print(error)
+            }
+            /*
             let pokemonList = try! JSONDecoder().decode(Pokemon.self, from: data)
             
             DispatchQueue.main.async {
                 completion(pokemonList.results)
             }
+            */
         }.resume()
     }
 }
+*/
