@@ -36,7 +36,7 @@ struct ContentView: View {
                         )
                     }
                     
-                }.listRowBackground(Color.mint .opacity(0.69999))
+                }.listRowBackground(Color.mint .opacity(0.9))
                     
             }
             .searchable(text: $searchText)
@@ -58,7 +58,7 @@ struct ContentView2: View {
     
     var body: some View {
         ZStack{
-            Image("5818315").resizable().aspectRatio(contentMode: .fit).frame(width: 1100, height: 1100, alignment: .center).opacity(0.4)
+            Image("5818315").resizable().aspectRatio(contentMode: .fit).frame(width: 1100, height: 1100, alignment: .center).opacity(0.7)
             VStack {
                 Text(name)
                     .padding()
