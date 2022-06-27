@@ -156,9 +156,9 @@ func playSound(name: String) {
             /* iOS 10 and earlier require the following line:
              player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
             
-            guard let player1 = player else { return }
+            guard let player = player else { return }
             
-            player1.play()
+            player.play()
             
         } catch let error {
             print("Error was detected")
