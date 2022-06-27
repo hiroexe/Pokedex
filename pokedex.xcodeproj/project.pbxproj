@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C6661472869969C005E5372 /* mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C6661462869969C005E5372 /* mp3 */; };
+		3C6661642869C052005E5372 /* Subsonic in Frameworks */ = {isa = PBXBuildFile; productRef = 3C6661632869C052005E5372 /* Subsonic */; };
 		3C96719E2861F96100B92B18 /* pokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96719D2861F96100B92B18 /* pokedexApp.swift */; };
 		3C9671A02861F96100B92B18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96719F2861F96100B92B18 /* ContentView.swift */; };
 		3C9671A22861F96500B92B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9671A12861F96500B92B18 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6661642869C052005E5372 /* Subsonic in Frameworks */,
 				3CEC55A02864AA380038AA53 /* SwiftyJSON in Frameworks */,
 				3CEC559D2864AA250038AA53 /* Alamofire in Frameworks */,
 			);
@@ -101,6 +103,7 @@
 			packageProductDependencies = (
 				3CEC559C2864AA250038AA53 /* Alamofire */,
 				3CEC559F2864AA380038AA53 /* SwiftyJSON */,
+				3C6661632869C052005E5372 /* Subsonic */,
 			);
 			productName = pokedex;
 			productReference = 3C96719A2861F96100B92B18 /* pokedex.app */;
@@ -133,6 +136,7 @@
 			packageReferences = (
 				3CEC559B2864AA250038AA53 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3CEC559E2864AA380038AA53 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3C6661622869C052005E5372 /* XCRemoteSwiftPackageReference "Subsonic" */,
 			);
 			productRefGroup = 3C96719B2861F96100B92B18 /* Products */;
 			projectDirPath = "";
@@ -365,6 +369,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3C6661622869C052005E5372 /* XCRemoteSwiftPackageReference "Subsonic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/Subsonic";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		3CEC559B2864AA250038AA53 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -384,6 +396,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3C6661632869C052005E5372 /* Subsonic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C6661622869C052005E5372 /* XCRemoteSwiftPackageReference "Subsonic" */;
+			productName = Subsonic;
+		};
 		3CEC559C2864AA250038AA53 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3CEC559B2864AA250038AA53 /* XCRemoteSwiftPackageReference "Alamofire" */;

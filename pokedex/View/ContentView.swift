@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftyJSON
 import Alamofire
 import AVFoundation
+import Subsonic
 
 struct ContentView: View {
     @State var pokemon = [PokemonInfo]()
@@ -57,6 +58,7 @@ struct ContentView2: View {
     var name: String
     var weight: Int
     var height: Int
+    @State private var sound = SubsonicPlayer(sound: "")
     
     var body: some View {
         ZStack{
@@ -72,7 +74,8 @@ struct ContentView2: View {
                 Text("Height: \(height)")
                     .padding()
                 Button("Play Cry", action: {
-                    playSound(name: "\(name)")
+                    sound = SubsonicPlayer(sound: "mp3/\(name).mp3")
+                    sound.play()
                     //print(name)
                 }).padding()
             }
@@ -134,6 +137,7 @@ class SizeParserMini: ObservableObject{
     }
 }
 
+/*
 func playSound(name: String) {
         
     var player : AVAudioPlayer?
@@ -165,3 +169,4 @@ func playSound(name: String) {
             print(error.localizedDescription)
         }
     }
+*/
