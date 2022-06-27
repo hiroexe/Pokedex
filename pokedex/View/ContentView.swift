@@ -72,8 +72,8 @@ struct ContentView2: View {
                 Text("Height: \(height)")
                     .padding()
                 Button("Play Cry", action: {
-                    playSound(sound: "\(name)")
-                    print(name)
+                    playSound(name: "\(name)")
+                    //print(name)
                 }).padding()
             }
         
@@ -134,14 +134,14 @@ class SizeParserMini: ObservableObject{
     }
 }
 
-func playSound(sound: String) {
+func playSound(name: String) {
         
     var player : AVAudioPlayer?
         //print("name")
         
-    guard let url = Bundle.main.url(forResource: "mp3/\(sound)", withExtension: "mp3") else {
+    guard let url = Bundle.main.url(forResource: "mp3/\(name)", withExtension: "mp3") else {
             print("RETURNING ")
-            print("\(sound)")
+            print("\(name)")
             return
         }
         
