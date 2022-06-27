@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftyJSON
 import Alamofire
+import AVFoundation
 
 struct ContentView: View {
     @State var pokemon = [PokemonInfo]()
@@ -48,6 +49,7 @@ struct ContentView: View {
         UITableView.appearance().backgroundColor = .red
         self.pokemon = database.pokemons
     }
+    
 }
 
 struct ContentView2: View {
@@ -69,9 +71,15 @@ struct ContentView2: View {
                     .padding()
                 Text("Height: \(height)")
                     .padding()
+                Button("Play Cry", action: {
+                    playSound(sound: "\(name)")
+                    print(name)
+                }).padding()
             }
         
         }
+        
+        
     }
     
     init(_ image: URL, _ name: String, _ weight: Int, _ height: Int) {
@@ -125,3 +133,35 @@ class SizeParserMini: ObservableObject{
         }
     }
 }
+
+func playSound(sound: String) {
+        
+    var player : AVAudioPlayer?
+        //print("name")
+        
+    guard let url = Bundle.main.url(forResource: "mp3/\(sound)", withExtension: "mp3") else {
+            print("RETURNING ")
+            print("\(sound)")
+            return
+        }
+        
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+            
+            guard let player1 = player else { return }
+            
+            player1.play()
+            
+        } catch let error {
+            print("Error was detected")
+            print(error.localizedDescription)
+        }
+    }
